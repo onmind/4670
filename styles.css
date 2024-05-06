@@ -26,7 +26,7 @@ body {
 
 .main-content {
     flex: 1 0 70%; /* 주 내용은 더 넓은 비율을 차지 */
-    border-right: 0.5px solid #ccc;
+    border-right: 0.5px solid #000;
 }
 
 .sidebar {
@@ -47,5 +47,5 @@ body {
 
 .footnote-ref a {
     text-decoration: none;
-    color: blue;
+    color: green;
 }
