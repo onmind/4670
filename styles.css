@@ -26,7 +26,7 @@ body {
 
 .main-content {
     flex: 1 0 70%; /* 주 내용은 더 넓은 비율을 차지 */
-    border-right: 2px solid #fff;
+    border-right: 2px solid #ccc;
 }
 
 .sidebar {
