@@ -26,7 +26,7 @@ body {
 
 .main-content {
     flex: 1 0 70%; /* 주 내용은 더 넓은 비율을 차지 */
-    border-right: 0.5px solid #000;
+    border-right: 2px solid #ccc;
 }
 
 .sidebar {
@@ -34,18 +34,6 @@ body {
     font-size: 0.800rem; /* 주석 폰트 크기를 작게 */
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .main-content, .sidebar {
-        flex: 1 0 100%;
-        border-right: none;
-    }
-}
-
-.footnote-ref a {
-    text-decoration: none;
-    color: green;
-}
+.main-content p, .sidebar p {
+    font-size: 1.1rem; /* 본문 글꼴 크기 증가 */
+    line-height: 1.8; /* 본문 줄 간격
