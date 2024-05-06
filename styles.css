@@ -18,54 +18,30 @@ body {
 
 .container {
     display: flex;
-    flex-direction: row;
-    justify-content: center; /* 컨텐츠 중앙 정렬 */
+    flex-direction: column;
     width: 100%;
-    max-width: 100px; /* 컨테이너 최대 너비 제한 */
-}
-
-.main-content, .sidebar {
-    padding: 20px;
-    overflow-y: auto;
+    max-width: 1000px; /* 컨테이너 최대 너비 제한 */
+    border: 0.5px solid #000; /* 컨테이너 테두리 추가 */
 }
 
 .main-content {
-    flex: 1 0 70%; /* 주 내용은 더 넓은 비율을 차지 */
-    border-right: 1px solid #000;
+    padding: 20px;
+    overflow-y: auto;
+    border-bottom: 0.5px solid #000; /* 본문과 각주 사이의 구분선 */
+}
+
+.definition {
+    font-size: 0.9rem;
+    color: #555; /* 정의 설명의 색상과 글꼴 크기 조정 */
+    padding: 10px 0; /* 정의의 패딩 */
 }
 
 .sidebar {
-    flex: 1 0 30%; /* 주석은 좁은 비율을 차지 */
-    font-size: 0.800rem; /* 주석 폰트 크기를 작게 */
-}
-
-.main-content p, .sidebar p {
-    font-size: 1.2rem; /* 본문 글꼴 크기 증가 */
-    line-height: 2.0; /* 본문 줄 간격 넓게 */
-}
-
-.sidebar p {
-    font-size: 0.8rem; /* 각주 폰트 크기 */
-    line-height: 1.6; /* 각주 줄 간격 조정 */
-}
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .main-content, .sidebar {
-        flex: 1 0 100%; /* 모바일에서는 본문과 사이드바가 100% 폭을 차지 */
-        border-right: none;
-    }
+    padding: 20px;
+    font-size: 0.9rem; /* 각주 폰트 크기 */
 }
 
 .footnote-ref a {
     text-decoration: none;
     color: blue;
-}
-
-abbr[title] {
-    text-decoration: underline dotted; /* 어려운 단어 밑줄 */
-    cursor: help; /* 마우스 오버 시 표시 변경 */
 }
