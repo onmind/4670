@@ -1,0 +1,51 @@
+body {
+    font-family: 'Pretendard', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.title {
+    font-size: 24px;
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;  /* 최대 너비 제한 */
+}
+
+.main-content, .sidebar {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.main-content {
+    flex: 1 0 70%; /* 주 내용은 더 넓은 비율을 차지 */
+    border-right: 2px solid #fff;
+}
+
+.sidebar {
+    flex: 1 0 30%; /* 주석은 좁은 비율을 차지 */
+    font-size: 0.800rem; /* 주석 폰트 크기를 작게 */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .main-content, .sidebar {
+        flex: 1 0 100%;
+        border-right: none;
+    }
+}
+
+.footnote-ref a {
+    text-decoration: none;
+    color: blue;
+}
