@@ -21,7 +21,7 @@ body {
     flex-direction: row;
     justify-content: center; /* 컨텐츠 중앙 정렬 */
     width: 100%;
-    max-width: 900px; /* 컨테이너 최대 너비 제한 */
+    max-width: 100px; /* 컨테이너 최대 너비 제한 */
 }
 
 .main-content, .sidebar {
@@ -31,7 +31,7 @@ body {
 
 .main-content {
     flex: 1 0 70%; /* 주 내용은 더 넓은 비율을 차지 */
-    border-right: 2px solid #ccc;
+    border-right: 1px solid #000;
 }
 
 .sidebar {
@@ -40,12 +40,12 @@ body {
 }
 
 .main-content p, .sidebar p {
-    font-size: 1.1rem; /* 본문 글꼴 크기 증가 */
-    line-height: 1.8; /* 본문 줄 간격 넓게 */
+    font-size: 1.2rem; /* 본문 글꼴 크기 증가 */
+    line-height: 2.0; /* 본문 줄 간격 넓게 */
 }
 
 .sidebar p {
-    font-size: 0.9rem; /* 각주 폰트 크기 */
+    font-size: 0.8rem; /* 각주 폰트 크기 */
     line-height: 1.6; /* 각주 줄 간격 조정 */
 }
 
