@@ -5,28 +5,33 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 100vh;  /* 화면 높이 전체를 사용 */
+    width: 100vw;  /* 화면 너비 전체를 사용 */
+    overflow-x: hidden; /* 화면 너비 초과 시 스크롤바 숨김 */
 }
 
 .title {
     font-size: 24px;
     margin: 20px;
+    width: 100%;  /* 타이틀 폭을 화면 너비 전체로 확장 */
 }
 
 .container {
     display: flex;
-    width: 90%;
-    max-width: 1200px;  /* 최대 너비 제한 */
+    flex-direction: row;
+    width: 100%;  /* 컨테이너 폭을 화면 너비 전체로 확장 */
+    max-width: 100%;  /* 최대 너비 제한 해제 */
 }
 
 .main-content, .sidebar {
     padding: 20px;
     overflow-y: auto;
+    width: 100%; /* 메인 컨텐츠와 사이드바 폭을 화면 너비 전체로 확장 */
 }
 
 .main-content {
     flex: 1 0 70%; /* 주 내용은 더 넓은 비율을 차지 */
-    border-right: 1px solid #000;
+    border-right: 2px solid #ccc;
 }
 
 .sidebar {
@@ -35,5 +40,32 @@ body {
 }
 
 .main-content p, .sidebar p {
-    font-size: 1.2rem; /* 본문 글꼴 크기 증가 */
-    line-height: 2.0; /* 본문 줄 간격
+    font-size: 1.1rem; /* 본문 글꼴 크기 증가 */
+    line-height: 1.8; /* 본문 줄 간격 넓게 */
+}
+
+.sidebar p {
+    font-size: 0.9rem; /* 각주 폰트 크기 */
+    line-height: 1.6; /* 각주 줄 간격 조정 */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .main-content, .sidebar {
+        flex: 1 0 100%; /* 모바일에서는 본문과 사이드바가 100% 폭을 차지 */
+        border-right: none;
+    }
+}
+
+.footnote-ref a {
+    text-decoration: none;
+    color: blue;
+}
+
+abbr[title] {
+    text-decoration: underline dotted; /* 어려운 단어 밑줄 */
+    cursor: help; /* 마우스 오버 시 표시 변경 */
+}
